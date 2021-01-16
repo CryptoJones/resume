@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.21 (MiKTeX 20.12) (preloaded format=pdflatex 2021.1.6)  6 JAN 2021 22:53
+This is pdfTeX, Version 3.14159265-2.6-1.40.21 (MiKTeX 20.12) (preloaded format=pdflatex 2021.1.6)  16 JAN 2021 07:17
 entering extended mode
 **./resume.tex
 (resume.tex
@@ -177,7 +177,7 @@ Underfull \hbox (badness 10000) in paragraph at lines 139--141
 Here is how much of TeX's memory you used:
  1731 strings out of 479696
  25729 string characters out of 2876986
- 313240 words of memory out of 3000000
+ 313256 words of memory out of 3000000
  18853 multiletter control sequences out of 15000+200000
  407429 words of font info for 40 fonts, out of 3000000 for 9000
  1141 hyphenation exceptions out of 8191
@@ -187,7 +187,7 @@ Here is how much of TeX's memory you used:
 ogram Files/MiKTeX/fonts/type1/public/amsfonts/cm/cmr10.pfb><C:/Program Files/M
 iKTeX/fonts/type1/public/amsfonts/cm/cmsy10.pfb><C:/Program Files/MiKTeX/fonts/
 type1/public/amsfonts/cm/cmti10.pfb>
-Output written on resume.pdf (2 pages, 85444 bytes).
+Output written on resume.pdf (2 pages, 84685 bytes).
 PDF statistics:
  29 PDF objects out of 1000 (max. 8388607)
  0 named destinations out of 1000 (max. 500000)
