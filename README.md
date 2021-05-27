@@ -1,3 +1,3 @@
 # Resume for Aaron K. Clark (CryptoJones) 
 
-https://raw.github.com/CryptoJones/resume/blob/master/resume.pdf
+https://raw.githubusercontent.com/CryptoJones/resume/master/resume.pdf
