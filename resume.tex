@@ -24,12 +24,23 @@
 
 \usepackage[left=0.75in,top=0.6in,right=0.75in,bottom=0.6in]{geometry} % Document margins
 \usepackage{hyperref}
+\usepackage{needspace}
 
 \name{Aaron K. Clark} % Your name
-\address{PO BOX 28 MINDEN, NE 68959 } % Your address
-\address{\href{tel:15712975406}{(571)~$\cdot$~297~$\cdot$~5406} \\ \href{mailto:aaron.clark@milcyber.org}{aaron.clark@milcyber.org}} % Your phone number and email
+\address{PO BOX 28 MINDEN, NE 68959}
+\address{\href{tel:15712975406}{(571)~$\cdot$~297~$\cdot$~5406} \\ \href{mailto:aaron.clark@milcyber.org}{aaron.clark@milcyber.org}}
+\address{\href{https://linkedin.com/in/aaronkclark}{linkedin.com/in/aaronkclark}}
 
 \begin{document}
+
+
+%----------------------------------------------------------------------------------------
+%	SUMMARY SECTION
+%----------------------------------------------------------------------------------------
+
+\begin{rSection}{Summary}
+Principal Software Engineer and ML/AI Technician with 25+ years of experience spanning AI/ML system design, cybersecurity, cloud infrastructure, and full-stack software engineering. Currently architecting machine learning systems for an AI startup, with a career-long track record delivering secure, production-grade software across defense, manufacturing, cloud operations, and information security. Holds active security and cloud certifications; CISSP in progress.
+\end{rSection}
 
 
 %----------------------------------------------------------------------------------------
@@ -38,23 +49,15 @@
 
 \begin{rSection}{Experience}
 
-\begin{rSubsection}{Ronin 48}{2026 - Present}{ML Architect}{Remote}
-	\item Consultating Architect for AI Startup
+\begin{rSubsection}{Ronin 48}{2026 - Present}{Software Architect}{Remote}
+	\item Designing overall system architecture for an AI startup; defining technical standards, guiding technology selection, and ensuring scalable, production-ready software design across the platform.
 \end{rSubsection}
 
-\begin{rSubsection}{SemperDucked, LLC}{2026 - Present}{Producer}{Worldwide}
-	\item Documented the Stories of Stateside and expat U.S. Military Veterans for podcast and YouTube consumption..
+\begin{rSubsection}{Ronin 48}{2026 - Present}{Machine Learning Technician}{Remote}
+	\item Implementing and operationalizing machine learning pipelines; guiding model selection and deployment strategy, and integrating ML capabilities into production systems.
 \end{rSubsection}
 
-\begin{rSubsection}{Nebraska Veteran's Stories}{2026 - Present}{Producer}{Central Nebraska}
-	\item Documented the Stories of Nebraska Veterans for podcast and YouTube consumption..
-\end{rSubsection}
-
-\begin{rSubsection}{StarLight.Photos}{2023 - Present}{Photographer/Videographer}{Central Nebraska}
-	\item Created still and video products for customers. Edited RAW Photos in Lightroom and Video in Davinci Resolve.
-\end{rSubsection}
-
-\begin{rSubsection}{Black Hills Information Security / Active Countermeasures}{2024 - 2024}{Senior Developer}{Remote}
+\begin{rSubsection}{Black Hills Information Security / Active Countermeasures}{Mar 2024 - Nov 2024}{Senior Developer}{Remote}
 	\item Upgraded Windows Service from dotNET Framework 4.x to dotNet 8, refactored code to be testable and created unit tests. Built Windows ports of Unix software. Wrote documentation and tutorials for blog posts and webcasts.
 \end{rSubsection}
 
@@ -75,18 +78,18 @@
 \end{rSubsection}
 
 \begin{rSubsection}{Reinke Manufacturing Company, Inc.}{2015 - 2021}{Senior Software Developer}{Remote} 
-\item Led Application development of middle ware application connecting AS/400-based ERP System and WinForms Sales Application. Created the Authentication/Authorization system using ASP.NET MVC 4. Stood up and maintained Azure infrastructure for the application. Evaluated 3rd-part SAST tools and made recommendations for their implementation.
+\item Led application development of middleware connecting an AS/400-based ERP system and a WinForms sales application. Built the authentication/authorization system using ASP.NET MVC 4. Stood up and maintained Azure infrastructure. Evaluated 3rd-party SAST tools and made recommendations for their implementation.
 \end{rSubsection}
 
 \begin{rSubsection}{Alpine Testing Solutions, Inc.}{2014 - 2015}{Software Developer}{Remote}
-\item Responsible for monitoring and mitigating data import errors , created T-SQL Queries for data imports and exports, wrote XML for manual data imports.
+\item Monitored and mitigated data import errors; created T-SQL queries for data imports and exports; wrote XML for manual data imports.
 \end{rSubsection}
 
 \begin{rSubsection}{Orthman Manufacturing, Inc.}{2012 - 2014}{IT Specialist II}{Lexington, Nebraska}
 \item Led virtualization project to migrate physical Windows Machines to virtual hosts. Created .NET Applications for internal use.
 \end{rSubsection}
 
-\begin{rSubsection}{Intellicom Computer Consulting, Inc.}{2009 - 2012}{Senior Engineering Technican}{Kearney, Nebraska}
+\begin{rSubsection}{Intellicom Computer Consulting, Inc.}{2009 - 2012}{Senior Engineering Technician}{Kearney, Nebraska}
 \item Installed and maintained Active Directory, File, and Exchange servers. 
 \end{rSubsection}
 
@@ -98,12 +101,12 @@
 \item Provided fanatical customer support to Linux Server owners.
 \end{rSubsection}
 
-\begin{rSubsection}{Cimmarron Software Services}{2001 - 2002}{Systems Analyst}{Houston, Texas}
+\begin{rSubsection}{Cimarron Software Services}{2001 - 2002}{Systems Analyst}{Houston, Texas}
 \item Supported heterogeneous multi-platform network across NASA's Johnson Space Center. Swapped backup tapes, reset passwords, recycled print queues.
 \end{rSubsection}
 
-\begin{rSubsection}{MegaHaus}{May 1998 - August 1998}{Help Desk Technician}{Dickinson, Texas}
-\item Created RMAs for customers, tested returned optical drives, hard drives, and multimedia periphials.
+\begin{rSubsection}{MegaHaus}{1998}{Help Desk Technician}{Dickinson, Texas}
+\item Created RMAs for customers; tested returned optical drives, hard drives, and multimedia peripherals.
 \end{rSubsection}
 
 \end{rSection}
@@ -112,13 +115,16 @@
 %	TECHNICAL STRENGTHS SECTION
 %----------------------------------------------------------------------------------------
 
+\needspace{14\baselineskip}
 \begin{rSection}{Technical Strengths}
 
-\begin{tabular}{ @{} >{\bfseries}l @{\hspace{6ex}} l }
-Tools & Burp Suite, Postman, Wireshark, NMap, LogScale(Humio), Kafka\\
-Languages & C\#, VB.NET, T-SQL, JavaScript, Powershell, Python\\
-Memberships & OWASP, ACM, DC402, RITSEC, SPARSA.ORG, OperationCode\\
-Certifications & CISSP (Pending), SSCP, AWS SAA, A+, Network+, CCNA, MCSA
+\begin{tabular}{ @{} >{\bfseries}l @{\hspace{6ex}} p{4.5in} }
+AI/ML & LangChain, Hugging Face, OpenAI API, Ollama, RAG pipelines, prompt engineering\\
+Cloud & AWS (EC2, S3, RDS, IAM, VPC, ELB, EFS, CloudFormation, CloudWatch), Azure\\
+Tools & Burp Suite, Postman, Wireshark, NMap, LogScale (Humio), Kafka, Docker, Kubernetes\\
+Languages & Python, C\#, VB.NET, T-SQL, JavaScript, PowerShell, Bash\\
+Certifications & CISSP (In Progress), SSCP, AWS SAA, AWS CCP, A+, Network+, MCSA: Windows Server 2008, MCP, MCITP: Server Administrator, MTA: Software Development Fundamentals, MS: Programming in C\#, CCNA (expired 2004)\\
+Memberships & OWASP, ACM, DC402, RITSEC, SPARSA.ORG, OperationCode
 \end{tabular}
 
 \end{rSection}
@@ -130,11 +136,45 @@ Certifications & CISSP (Pending), SSCP, AWS SAA, A+, Network+, CCNA, MCSA
 
 \begin{rSection}{Education}
 
-I have been awarded a \href{https://raw.githubusercontent.com/CryptoJones/cv/master/RIT_MMM.pdf}{MicroMaster's in Cybersecurity} from RIT, Graduate Certificates in  \href{https://raw.githubusercontent.com/CryptoJones/cv/master/CSU_GRADCERT_ITPM.jpg}{IT Project Management} from Colorado State University and \href{https://raw.githubusercontent.com/CryptoJones/cv/master/KSU_GRADCERT_CSF.jpg}{Computer Science} from Kennesaw State University. 
+{\bf Eastern University} \hfill {2026 -- Present} \\
+Graduate Studies
 
-I also have a \href{https://github.com/CryptoJones/cv/raw/master/UMUC_UNDERGRAD_DIPLOMA.jpg}{Bachelor of Science} from the University of Maryland University College in Computer and Information Science. 
+{\bf Rochester Institute of Technology} \\
+\href{https://raw.githubusercontent.com/CryptoJones/cv/master/RIT_MMM.pdf}{MicroMaster's in Cybersecurity}
 
-For my full academic CV, see: \href{https://github.com/CryptoJones/cv/raw/master/Clark\%2C\%20Aaron\%20K.\%20-\%20CV.pdf}{https://github.com/cryptojones/cv}
+{\bf University of Maryland University College} \\
+\href{https://github.com/CryptoJones/cv/raw/master/UMUC_UNDERGRAD_DIPLOMA.jpg}{Bachelor of Science, Computer and Information Science}
+
+{\bf Colorado State University} \\
+\href{https://raw.githubusercontent.com/CryptoJones/cv/master/CSU_GRADCERT_ITPM.jpg}{Graduate Certificate, IT Project Management}
+
+{\bf Kennesaw State University} \\
+\href{https://raw.githubusercontent.com/CryptoJones/cv/master/KSU_GRADCERT_CSF.jpg}{Graduate Certificate, Computer Science}
+
+\end{rSection}
+
+
+%----------------------------------------------------------------------------------------
+%	VOLUNTEER EXPERIENCE SECTION
+%----------------------------------------------------------------------------------------
+
+\begin{rSection}{Volunteer Experience}
+
+\begin{rSubsection}{Minden Volunteer Fire Department}{Dec 2024 - Present}{Probationary Member / EMT-B}{Minden, Nebraska}
+\item Serve as probationary firefighter and Emergency Medical Technician.
+\end{rSubsection}
+
+\begin{rSubsection}{Women in CyberSecurity (WiCyS)}{Mar 2021 - Mar 2024}{Student Mentor}{Remote}
+\item Mentored students pursuing careers in cybersecurity.
+\end{rSubsection}
+
+\begin{rSubsection}{Harvard University}{Spring 2022}{Teaching Assistant}{Remote}
+\item Teaching assistant for the Online Computing Mini Course.
+\end{rSubsection}
+
+\begin{rSubsection}{Army National Guard}{Jul 2021}{OPFOR Lead}{Remote}
+\item Led Opposing Force (OPFOR) exercises for Army National Guard training.
+\end{rSubsection}
 
 \end{rSection}
 
