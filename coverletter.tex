@@ -1,0 +1,69 @@
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% Cover letter — shares the resume.cls letterhead for a cohesive look.
+% TO TAILOR PER APPLICATION, edit only the four \def lines below:
+%   \company, \role, \manager, and \lane  (lane = dotnet | devrel | ai)
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\documentclass{resume}
+
+\usepackage[left=0.9in,top=0.7in,right=0.9in,bottom=0.7in]{geometry}
+\PassOptionsToPackage{hyphens}{url}
+\usepackage{hyperref}
+\hypersetup{pageanchor=false}
+\usepackage{xcolor}
+
+\name{Aaron K. Clark}
+\makeatletter
+\def\printname{%
+  \begin{center}%
+    {\MakeUppercase{\namesize\bf \@name}}%
+  \end{center}%
+  \nameskip
+}
+\makeatother
+\address{\href{tel:15712975406}{(571)~$\cdot$~297~$\cdot$~5406} \\ \href{mailto:aaron.clark@milcyber.org}{aaron.clark@milcyber.org}}
+\address{PO BOX 28 MINDEN, NE 68959 \\ \href{https://linkedin.com/in/aaronkclark}{linkedin.com/in/aaronkclark} \\ \href{https://github.com/CryptoJones}{github.com/CryptoJones}}
+
+%======================= EDIT PER APPLICATION =======================
+\def\company{[Company Name]}
+\def\role{[Role Title]}
+\def\manager{Hiring Team}          % e.g. "Ms. Jane Smith", or leave as "Hiring Team"
+\def\lane{ai}                      % which strength to lead with: dotnet | devrel | ai
+%====================================================================
+
+\begin{document}
+
+\vspace{0.5em}
+\today
+
+\bigskip
+\noindent \manager \\
+\company
+
+\bigskip
+\noindent Dear \manager,
+
+I am writing to apply for the \role\ position at \company. Over the past 25 years I have shipped production software across .NET/backend engineering, AI-agent infrastructure, cloud, and security --- most recently building Model Context Protocol (MCP) servers and autonomous agents and architecting ML pipelines for an AI startup. I would bring that range, and a strong bias toward shipping working software, to your team.
+
+\ifthenelse{\equal{\lane}{dotnet}}{%
+What draws me to this role is the chance to build well-engineered backend systems. I have led .NET development since the ASP.NET MVC days: I built the authentication/authorization layer and ERP middleware at Reinke Manufacturing, modernized a Windows service from .NET Framework 4.x to .NET 8 with a real unit-test suite at Black Hills Information Security, and I contribute fixes upstream to Libation, a widely used C\#/.NET application (merged PR \#1814, with feature PRs in review). I care about testable code, clean interfaces, and systems that hold up in production.%
+}{}
+
+\ifthenelse{\equal{\lane}{devrel}}{%
+What draws me to this role is helping other developers succeed. At Black Hills Information Security I wrote the documentation, tutorials, blog posts, and webcast material that made our tooling usable; I have mentored engineers through Women in CyberSecurity, served as a teaching assistant for a Harvard online course, and recently delivered a conference talk (``Databases for Hackers'') that I localized into six languages. I am at my best translating hard technical material into things people actually adopt.%
+}{}
+
+\ifthenelse{\equal{\lane}{ai}}{%
+What draws me to this role is that I am already building in this space, not just reading about it. I have shipped four security-hardened MCP servers --- exposing Kali Linux tooling and search APIs to AI agents, with refuse-list guards and audit logging on every call --- plus a personal agent framework with persistent memory and multi-provider LLM fallback, and memory tooling for Claude Code. I work daily with the Anthropic and OpenAI APIs, tool-use/function-calling, RAG, and local models, and I ship it as real, open-source code you can read today at \href{https://github.com/CryptoJones}{github.com/CryptoJones}.%
+}{}
+
+I am based in central Nebraska and work effectively remote, as I have for most of the past decade, or on-site within the region. I would welcome the chance to talk about how I can contribute to \company.
+
+\bigskip
+\noindent Thank you for your time and consideration.
+
+\bigskip
+\noindent Sincerely, \\[1em]
+Aaron K. Clark
+
+\end{document}
