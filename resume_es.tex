@@ -1,25 +1,3 @@
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-% Medium Length Professional CV
-% LaTeX Template
-% Version 2.0 (8/5/13)
-%
-% This template has been downloaded from:
-% http://www.LaTeXTemplates.com
-%
-% Original author:
-% Trey Hunner (http://www.treyhunner.com/)
-%
-% Important note:
-% This template requires the resume.cls file to be in the same directory as the
-% .tex file. The resume.cls file provides the resume style used for structuring the
-% document.
-%
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-
-%----------------------------------------------------------------------------------------
-%	PACKAGES AND OTHER DOCUMENT CONFIGURATIONS
-%----------------------------------------------------------------------------------------
-
 \documentclass{resume} % Use the custom resume.cls style
 
 \usepackage[left=0.75in,top=0.6in,right=0.75in,bottom=0.6in]{geometry} % Document margins
@@ -31,7 +9,7 @@
 \usepackage{needspace}
 \usepackage{xcolor}
 
-\name{Aaron K. Clark}
+\name{Aaron K. Clark} % Your name
 
 \makeatletter
 \def\printname{%
@@ -48,110 +26,110 @@
 
 
 %----------------------------------------------------------------------------------------
-%	RESUMEN
+%	SUMMARY SECTION
 %----------------------------------------------------------------------------------------
 
 \begin{rSection}{Resumen}
-Ingeniero de Software Principal con m\'as de 25 a\~nos de experiencia que abarca desarrollo .NET/backend, infraestructura de agentes de IA, nube y seguridad. Recientemente construyendo agentes de IA en producci\'on y servidores de Model Context Protocol (MCP), y dise\~nando canalizaciones de ML para una startup de IA. S\'olida experiencia en C\#/.NET y Python, con una trayectoria comprobada de redacci\'on t\'ecnica clara y habilitaci\'on de desarrolladores. Veterano del USMC.
+Ingeniero de Software Principal con m\'as de 25 a\~nos de experiencia que abarca desarrollo .NET/backend, infraestructura de agentes de IA, nube y seguridad. Recientemente desarrollando agentes de IA en producci\'on y servidores Model Context Protocol (MCP), y dise\~nando arquitecturas de pipelines de ML para una startup de IA. Amplia experiencia en C\#/.NET y Python, con una trayectoria de redacci\'on t\'ecnica clara y habilitaci\'on de desarrolladores. Veterano del USMC.
 \end{rSection}
 
 
 %----------------------------------------------------------------------------------------
-%	PROYECTOS DE CÓDIGO ABIERTO E IA
+%	OPEN-SOURCE & AI PROJECTS SECTION
 %----------------------------------------------------------------------------------------
 
 \begin{rSection}{Proyectos Destacados de C\'odigo Abierto e IA}
 
 \begin{rSubsection}{\href{https://github.com/CryptoJones/KaliMCP}{KaliMCP} \& \href{https://github.com/CryptoJones/PerplexityAgent}{PerplexityAgent}}{Python}{}{}
-\item Dos servidores de Model Context Protocol (MCP) reforzados en seguridad que exponen, respectivamente, un subconjunto curado de herramientas de seguridad de Kali Linux y las APIs de B\'usqueda/Sonar de Perplexity a agentes de IA; protecciones de lista de rechazo por invocaci\'on y registro de auditor\'ia, reforzados seg\'un las directrices de seguridad de MCP de la NSA.
+\item Dos servidores Model Context Protocol (MCP) reforzados en seguridad que exponen, respectivamente, un subconjunto curado de herramientas de seguridad de Kali Linux y las APIs de Perplexity Search/Sonar a agentes de IA; protecciones con lista de rechazo por invocaci\'on y registro de auditor\'ia, reforzados conforme a las directrices de seguridad de MCP de la NSA.
 \end{rSubsection}
 
 \begin{rSubsection}{\href{https://github.com/CryptoJones/omind}{omind}}{Python}{}{}
-\item Herramientas de memoria persistente para Claude Code (Obsidian/OMI): configuraci\'on reproducible con un solo comando en m\'ultiples m\'aquinas, m\'as una aplicaci\'on web local para ver, editar y agregar entradas de memoria del agente.
+\item Herramientas de memoria persistente para Claude Code (Obsidian/OMI): configuraci\'on reproducible con un solo comando entre m\'aquinas, m\'as una aplicaci\'on web local para ver, editar y agregar entradas de memoria del agente.
 \end{rSubsection}
 
 \begin{rSubsection}{\href{https://github.com/CryptoJones/TimeTrackerAPI}{TimeTrackerAPI}}{Node.js, PostgreSQL}{}{}
-\item Reescritura de una API REST de c\'odigo abierto con autenticaci\'on por clave de API sobre un backend PostgreSQL.
+\item Reescritura de API REST de c\'odigo abierto con autenticaci\'on mediante clave de API sobre un backend de PostgreSQL.
 \end{rSubsection}
 
 \begin{rSubsection}{Contribuciones de C\'odigo Abierto}{C\#/.NET, Java}{}{}
-\item {\bf Libation} (C\#/.NET) --- contribuidor del gestor de biblioteca de Audible de c\'odigo abierto; fusion\'o el PR \#1814 (correcci\'on de prueba unitaria dependiente de la configuraci\'on regional) con PRs de funciones adicionales en revisi\'on.
-\item {\bf \href{https://github.com/CryptoJones/hermes-agent}{hermes-agent}} (Python) --- contribuidor de un framework de agente de IA personal de c\'odigo abierto con memoria persistente, autonom\'ia programada y enrutamiento de LLM multiproveedor con respaldo autom\'atico.
-\item {\bf OWASP ZAP} (Java) --- contribuidor continuo del esc\'aner de aplicaciones web insignia de OWASP.
+\item {\bf Libation} (C\#/.NET) --- colaborador del gestor de biblioteca de Audible de c\'odigo abierto; PR \#1814 fusionado (correcci\'on de prueba unitaria dependiente de la configuraci\'on regional) con PRs de funcionalidades adicionales en revisi\'on.
+\item {\bf \href{https://github.com/CryptoJones/hermes-agent}{hermes-agent}} (Python) --- colaborador de un framework de agente de IA personal de c\'odigo abierto con memoria persistente, autonom\'ia programada y enrutamiento de LLM multiproveedor con respaldo autom\'atico.
+\item {\bf OWASP ZAP} (Java) --- colaborador continuo del esc\'aner de aplicaciones web insignia de OWASP.
 \end{rSubsection}
 
 \end{rSection}
 
 
 %----------------------------------------------------------------------------------------
-%	EXPERIENCIA LABORAL
+%	WORK EXPERIENCE SECTION
 %----------------------------------------------------------------------------------------
 
 \begin{rSection}{Experiencia}
 
 \begin{rSubsection}{Ronin 48}{Mar 2026 - Presente}{Arquitecto de Software Principal e Ingeniero de ML (Contrato)}{Remoto}
-	\item Dise\~nando la arquitectura general del sistema para una startup de IA; definiendo est\'andares t\'ecnicos, guiando la selecci\'on de tecnolog\'ia y garantizando un dise\~no de software escalable y listo para producci\'on en toda la plataforma.
-	\item Implementando y operacionalizando canalizaciones de aprendizaje autom\'atico; guiando la estrategia de selecci\'on e implementaci\'on de modelos, e integrando capacidades de ML en sistemas de producci\'on.
+	\item Dise\~nando la arquitectura general del sistema para una startup de IA; definiendo est\'andares t\'ecnicos, guiando la selecci\'on de tecnolog\'ias y garantizando un dise\~no de software escalable y listo para producci\'on en toda la plataforma.
+	\item Implementando y operacionalizando pipelines de aprendizaje autom\'atico; guiando la selecci\'on de modelos y la estrategia de despliegue, e integrando capacidades de ML en sistemas de producci\'on.
 \end{rSubsection}
 
-\begin{rSubsection}{Pausa Profesional}{Nov 2024 - Mar 2026}{Certificaci\'on EMT-B y Servicio Comunitario}{Minden, Nebraska}
-	\item Complet\'o la certificaci\'on de T\'ecnico en Emergencias M\'edicas (EMT-B) y se uni\'o al Cuerpo de Bomberos Voluntarios de Minden como bombero en per\'iodo de prueba / EMT. Estudio autodirigido en sistemas de IA/ML.
+\begin{rSubsection}{Pausa Profesional}{Nov 2024 - Mar 2026}{Certificaci\'on EMT-B \& Servicio Comunitario}{Minden, Nebraska}
+	\item Complet\'e la certificaci\'on de T\'ecnico en Emergencias M\'edicas (EMT-B) y me un\'i al Departamento de Bomberos Voluntarios de Minden como bombero/EMT en per\'iodo de prueba. Estudio autodirigido en sistemas de IA/ML.
 \end{rSubsection}
 
 \begin{rSubsection}{Black Hills Information Security / Active Countermeasures}{Mar 2024 - Nov 2024}{Desarrollador Senior}{Remoto}
-	\item Actualiz\'o el Servicio de Windows de dotNET Framework 4.x a dotNet 8, refactoriz\'o el c\'odigo para que fuera testeable y cre\'o pruebas unitarias. Desarroll\'o puertos de Windows de software Unix. Redact\'o documentaci\'on y tutoriales para publicaciones de blog y webcasts.
+	\item Actualic\'e un Servicio de Windows de dotNET Framework 4.x a dotNet 8, refactoric\'e el c\'odigo para hacerlo comprobable y cre\'e pruebas unitarias. Desarroll\'e versiones para Windows de software Unix. Redact\'e documentaci\'on y tutoriales para publicaciones de blog y webcasts.
 \end{rSubsection}
 
 \begin{rSubsection}{CrowdStrike}{Ago 2022 - Mar 2024}{Ingeniero Senior de Soporte T\'ecnico}{Remoto}
-	\item Experto en la materia (SME) para LogScale (Humio), Kafka y servidores de registros SaaS y locales. Cre\'o infraestructura de entorno de pruebas usando Terraform y k8s. Desarroll\'o automatizaci\'on y herramientas en Bash y Python.
+	\item Experto en la materia (SME) para LogScale(Humio), Kafka y log shippers en SaaS y on-premise. Cre\'e infraestructura de entornos aislados (sandbox) usando terraform y k8s. Escrib\'i automatizaci\'on y herramientas en bash y Python.
 \end{rSubsection}
 
-\begin{rSubsection}{CloudHesive, LLC}{Dic 2021 - May 2022}{Supervisor de Operaciones en la Nube}{Remoto}
-\item Lider\'o el equipo de Operaciones en la Nube que da soporte a m\'as de 2000 sistemas de clientes en AWS, Azure y VMware; contrat\'o y desarroll\'o ingenieros enfocados en seguridad y excelencia operativa.
+\begin{rSubsection}{CloudHesive}{Dic 2021 - May 2022}{Supervisor de Operaciones en la Nube}{Remoto}
+\item Lider\'e el equipo de Operaciones en la Nube que daba soporte a m\'as de 2000 sistemas de clientes en AWS, Azure y VMware; contrat\'e y desarroll\'e ingenieros enfocados en seguridad y excelencia operativa.
 \end{rSubsection}
 
-\begin{rSubsection}{CloudHesive, LLC}{Ago 2021 - Dic 2021}{Ingeniero de Soporte en la Nube II}{Remoto}
-\item Brind\'o soporte a m\'as de 2000 sistemas de clientes en infraestructuras AWS, Azure y VMware. Utiliz\'o Datadog, SumoLogic y NewRelic para monitorear sistemas y redes de clientes. Gestion\'o procesos de respaldo y recuperaci\'on. Las tecnolog\'ias incluyeron CloudFormation, CloudWatch, EC2, EFS, ELB, IAM, RDS, S3, VPC y Workspaces.
+\begin{rSubsection}{CloudHesive}{Ago 2021 - Dic 2021}{Ingeniero de Soporte en la Nube II}{Remoto}
+\item Brind\'e soporte a m\'as de 2000 sistemas de clientes en infraestructuras de AWS, Azure y VMWare. Utilic\'e Datadog, SumoLogic y NewRelic para monitorear sistemas y redes de clientes. Gestion\'e procesos de respaldo y recuperaci\'on. Las tecnolog\'ias inclu\'ian CloudFormation, CloudWatch, EC2, EFS, ELB, IAM, RDS, S3, VPC y Workspaces.  
 \end{rSubsection}
 
-\begin{rSubsection}{Tmutla, Inc.}{Feb 2021 - Ago 2021}{Consultor de Ciberseguridad}{Grand Island, Nebraska}
-\item Realiz\'o pruebas de penetraci\'on de aplicaciones web y redact\'o informes para clientes.
+\begin{rSubsection}{Tmutla}{Feb 2021 - Ago 2021}{Consultor de Ciberseguridad}{Grand Island, Nebraska}
+\item Realic\'e pruebas de penetraci\'on de aplicaciones web y redact\'e informes para clientes.
 \end{rSubsection}
 
-\begin{rSubsection}{Reinke Manufacturing Company, Inc.}{Dic 2015 - Feb 2021}{Desarrollador de Software Senior}{Remoto}
-\item Lider\'o el desarrollo de aplicaciones de middleware que conectan un sistema ERP basado en AS/400 y una aplicaci\'on de ventas WinForms. Construy\'o el sistema de autenticaci\'on y autorizaci\'on usando ASP.NET MVC 4. Estableci\'o y mantuvo la infraestructura de Azure. Evalu\'o herramientas SAST de terceros y realiz\'o recomendaciones para su implementaci\'on.
+\begin{rSubsection}{Reinke Manufacturing Company}{Dic 2015 - Feb 2021}{Desarrollador Senior}{Remoto} 
+\item Lider\'e el desarrollo de aplicaciones de middleware que conectaba un sistema ERP basado en AS/400 y una aplicaci\'on de ventas en WinForms. Constru\'i el sistema de autenticaci\'on/autorizaci\'on usando ASP.NET MVC 4. Implement\'e y mantuve infraestructura en Azure. Evalu\'e herramientas SAST de terceros e hice recomendaciones para su implementaci\'on.
 \end{rSubsection}
 
 \begin{rSubsection}{Alpine Testing Solutions, Inc.}{2014 - 2015}{Desarrollador de Software}{Remoto}
-\item Monitoriz\'o y mitig\'o errores de importaci\'on de datos; cre\'o consultas T-SQL para importaciones y exportaciones de datos; escribi\'o XML para importaciones de datos manuales.
+\item Monitore\'e y mitigu\'e errores de importaci\'on de datos; cre\'e consultas T-SQL para importaciones y exportaciones de datos; escrib\'i XML para importaciones manuales de datos.
 \end{rSubsection}
 
 \begin{rSubsection}{Orthman Manufacturing, Inc.}{2012 - 2014}{Especialista en TI II}{Lexington, Nebraska}
-\item Lider\'o el proyecto de virtualizaci\'on para migrar m\'aquinas Windows f\'isicas a hosts virtuales. Cre\'o aplicaciones .NET para uso interno.
+\item Lider\'e un proyecto de virtualizaci\'on para migrar m\'aquinas f\'isicas con Windows a hosts virtuales. Cre\'e aplicaciones .NET para uso interno.
 \end{rSubsection}
 
-\begin{rSubsection}{Intellicom Computer Consulting, Inc.}{2009 - 2012}{T\'ecnico de Ingenier\'ia Senior}{Kearney, Nebraska}
-\item Instal\'o y mantuvo servidores de Active Directory, archivos y Exchange.
+\begin{rSubsection}{Intellicom Computer Consulting, Inc.}{2009 - 2012}{T\'ecnico Senior de Ingenier\'ia}{Kearney, Nebraska}
+\item Instal\'e y mantuve servidores de Active Directory, archivos y Exchange. 
 \end{rSubsection}
 
 \begin{rSubsection}{Experiencia Anterior}{1998 - 2008}{}{}
-\item {\bf Cuerpo de Marines de los Estados Unidos} -- Especialista en Informaci\'on (2003--2008), Washington, D.C. Oper\'o y dio soporte a la red del USMC; graduado del Curso de Gerente de Aseguramiento de la Informaci\'on del USMC.
+\item {\bf Cuerpo de Marines de los Estados Unidos} -- Especialista en Informaci\'on (2003--2008), Washington, DC. Oper\'e y di soporte a la red del USMC; graduado del Curso de Gestor de Aseguramiento de la Informaci\'on del USMC.
 \item {\bf Rackspace} -- Administrador de Sistemas Linux (2003), San Antonio, TX.
-\item {\bf Cimarron Software Services} -- Analista de Sistemas en el Centro Espacial Johnson de la NASA (2001--2002), Houston, TX.
+\item {\bf Cimarron Software Services} -- Analista de Sistemas en el NASA Johnson Space Center (2001--2002), Houston, TX.
 \item {\bf MegaHaus} -- T\'ecnico de Mesa de Ayuda (1998), Dickinson, TX.
 \end{rSubsection}
 
 \end{rSection}
 
 %----------------------------------------------------------------------------------------
-%	COMPETENCIAS TÉCNICAS
+%	TECHNICAL STRENGTHS SECTION
 %----------------------------------------------------------------------------------------
 
 \needspace{14\baselineskip}
 \begin{rSection}{Competencias T\'ecnicas}
 
 \begin{tabular}{ @{} >{\bfseries}l @{\hspace{6ex}} p{4.5in} }
-IA/ML & Servidores de Model Context Protocol (MCP), herramientas y orquestaci\'on de agentes, uso de herramientas / llamada a funciones, Claude Code y Codex, LangChain, LangGraph, Hugging Face, APIs de OpenAI y Anthropic, Ollama, canalizaciones RAG, bases de datos vectoriales (pgvector, Pinecone), ingenier\'ia de prompts\\
+IA/ML & servidores Model Context Protocol (MCP), herramientas y orquestaci\'on de agentes, uso de herramientas / llamado de funciones, Claude Code \& Codex, LangChain, LangGraph, Hugging Face, APIs de OpenAI \& Anthropic, Ollama, pipelines de RAG, bases de datos vectoriales (pgvector, Pinecone), ingenier\'ia de prompts\\
 Nube & AWS (EC2, S3, RDS, IAM, VPC, ELB, EFS, CloudFormation, CloudWatch), Azure, Terraform\\
 Herramientas & Burp Suite, Postman, Wireshark, NMap, LogScale (Humio), Kafka, Docker, Kubernetes\\
 Lenguajes & Python, C\#, TypeScript, JavaScript, VB.NET, T-SQL, PowerShell, Bash\\
@@ -163,19 +141,19 @@ Membres\'ias & OWASP, ACM, DC402, RITSEC, SPARSA.ORG, OperationCode
 
 
 %----------------------------------------------------------------------------------------
-%	EDUCACIÓN
+%	EDUCATION SECTION
 %----------------------------------------------------------------------------------------
 
 \begin{rSection}{Educaci\'on}
 
 {\bf Eastern University} \hfill {2026 -- Presente} \\
-MS, An\'alitica de Datos (En Progreso)
+MS, An\'alisis de Datos (En Curso)
 
 {\bf University of Maryland University College} \\
-\href{https://github.com/CryptoJones/cv/raw/master/UMUC_UNDERGRAD_DIPLOMA.jpg}{Licenciatura en Ciencias, Inform\'atica y Ciencias de la Informaci\'on}
+\href{https://github.com/CryptoJones/cv/raw/master/UMUC_UNDERGRAD_DIPLOMA.jpg}{Licenciatura en Ciencias, Ciencias de la Computaci\'on e Informaci\'on}
 
 {\bf Rochester Institute of Technology} \\
-\href{https://raw.githubusercontent.com/CryptoJones/cv/master/RIT_MMM.pdf}{Micro Maestr\'ia en Ciberseguridad}
+\href{https://raw.githubusercontent.com/CryptoJones/cv/master/RIT_MMM.pdf}{MicroMaster en Ciberseguridad}
 
 {\bf Kennesaw State University} \\
 \href{https://raw.githubusercontent.com/CryptoJones/cv/master/KSU_GRADCERT_CSF.jpg}{Certificado de Posgrado, Ciencias de la Computaci\'on}
@@ -190,28 +168,30 @@ Certificado de Pregrado, Administraci\'on de Sistemas Unix
 
 
 %----------------------------------------------------------------------------------------
-%	EXPERIENCIA VOLUNTARIA
+%	VOLUNTEER EXPERIENCE SECTION
 %----------------------------------------------------------------------------------------
 
 \begin{rSection}{Experiencia Voluntaria}
 
-\begin{rSubsection}{Cuerpo de Bomberos Voluntarios de Minden}{Dic 2024 - Presente}{Miembro en Per\'iodo de Prueba / EMT-B}{Minden, Nebraska}
-\item Se desempe\~na como bombero en per\'iodo de prueba y T\'ecnico en Emergencias M\'edicas.
-\end{rSubsection}
-
-\begin{rSubsection}{Women in CyberSecurity (WiCyS)}{Mar 2021 - Mar 2024}{Mentor de Estudiantes}{Remoto}
-\item Orient\'o a estudiantes que persiguen carreras en ciberseguridad.
-\end{rSubsection}
-
-\begin{rSubsection}{Universidad de Harvard}{Primavera 2022}{Asistente de Ense\~nanza}{Remoto}
-\item Asistente de ense\~nanza para el Mini Curso de Inform\'atica en L\'inea.
-\end{rSubsection}
-
-\begin{rSubsection}{Guardia Nacional del Ej\'ercito}{Jul 2021}{L\'ider del Equipo Rojo (OPFOR)}{Remoto}
-\item L\'ider del Equipo Rojo (OPFOR) para Cybershield 2021.
+\begin{rSubsection}{Servicio Comunitario y de la Industria}{2021 - Presente}{}{}
+\item {\bf Departamento de Bomberos Voluntarios de Minden} --- Bombero en Per\'iodo de Prueba / EMT-B (Dic 2024 -- Presente), Minden, NE.
+\item {\bf Women in CyberSecurity (WiCyS)} --- Mentor de Estudiantes (2021--2024).
+\item {\bf Universidad de Harvard} --- Asistente de C\'atedra, Mini Curso de Computaci\'on en L\'inea (Primavera 2022).
+\item {\bf Guardia Nacional del Ej\'ercito} --- L\'ider del Equipo Rojo (OPFOR), Cybershield 2021.
 \end{rSubsection}
 
 \end{rSection}
+
+
+%----------------------------------------------------------------------------------------
+%	EXAMPLE SECTION
+%----------------------------------------------------------------------------------------
+
+%\begin{rSection}{Section Name}
+
+%Section content\ldots
+
+%\end{rSection}
 
 %----------------------------------------------------------------------------------------
 
