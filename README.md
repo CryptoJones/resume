@@ -54,3 +54,5 @@ make            # = make pdf md
 make clean      # LaTeX build artifacts
 make distclean  # also the generated .pdf/.md files
 ```
+
+Proudly Made in Nebraska. Go Big Red! 🌽 https://xkcd.com/2347/
