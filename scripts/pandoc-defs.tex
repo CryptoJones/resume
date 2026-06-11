@@ -1,0 +1,20 @@
+% Pandoc-only shims for the custom resume.cls constructs.
+% Prepended to the .tex source by the `make %.md` rule so pandoc's LaTeX
+% reader (which never sees resume.cls) gets standard equivalents it can
+% parse. pdflatex never reads this file.
+%
+% Heading map: \name -> H1, rSection -> H2, rSubsection -> H3.
+% \name/\address sit in the LaTeX preamble, whose body content pandoc
+% drops, so they are routed through title/author metadata and turned
+% back into blocks by scripts/resume-md.lua. rSubsection's
+% dates/role/location args are emitted as a |-separated blockquote that
+% the same filter rewrites into an italic meta line.
+\newcommand{\name}[1]{\title{#1}}
+\newcommand{\address}[1]{\author{#1}}
+\newcommand{\needspace}[1]{}
+\newenvironment{rSection}[1]{\subsection{#1}}{}
+\newenvironment{rSubsection}[4]{%
+  \subsubsection{#1}%
+  \begin{quote}#2|#3|#4\end{quote}%
+  \begin{itemize}%
+}{\end{itemize}}
