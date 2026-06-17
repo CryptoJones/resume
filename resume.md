@@ -33,7 +33,9 @@ Principal Software Engineer with 25+ years spanning .NET/backend development, AI
 
 ### Open-Source Contributions
 
-*C#/.NET, Java*
+*C#/.NET, Python, Java*
+
+- **[Omnigent](https://github.com/omnigent-ai/omnigent)** (Python) — contributor to an open-source meta-harness for AI agents (a policy/sandbox layer over Claude Code, Codex, and custom agents); authored three merged P0 security fixes (PRs \#158, \#161, \#163) hardening session input validation (RCE), OIDC login (identity spoofing), and policy fail-closed enforcement.
 
 - **Libation** (C#/.NET) — contributor to the open-source Audible library manager; merged PR \#1814 (locale-dependent unit-test fix) with additional feature PRs in review.
 
