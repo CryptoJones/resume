@@ -50,7 +50,7 @@
 %----------------------------------------------------------------------------------------
 
 \begin{rSection}{Summary}
-Principal Software Engineer with 25+ years spanning .NET/backend development, AI agent infrastructure, cloud, and security. Recently building production AI agents and Model Context Protocol (MCP) servers and architecting ML pipelines for an AI startup. Deep C\#/.NET and Python background, with a track record of clear technical writing and developer enablement. USMC veteran.
+Principal Software Engineer with 25+ years spanning .NET/backend development, AI agent infrastructure and governance, cloud, and security. Recently building production AI agents and Model Context Protocol (MCP) servers, architecting ML pipelines for an AI startup, and maintaining a security-hardened fork of the NSA's Ghidra reverse-engineering platform. Deep C\#/.NET and Python background, with a track record of clear technical writing and developer enablement. USMC veteran.
 \end{rSection}
 
 
@@ -60,12 +60,18 @@ Principal Software Engineer with 25+ years spanning .NET/backend development, AI
 
 \begin{rSection}{Selected Open-Source \& AI Projects}
 
+\begin{rSubsection}{\href{https://github.com/CryptoJones/GayHydra}{GayHydra} --- hardened fork of NSA Ghidra}{C++, Java}{}{}
+\item Sole architect of a security-hardened fork of the NSA's Ghidra reverse-engineering platform (a multi-million-line C++/Java codebase), driving a 42-item principal-architect audit into shipped releases across security, decompiler, and CI/release engineering.
+\item Hardened the Java deserialization attack surface (default-reject class filtering; bounds-checked packed-file decode that rejects forged / zip-bomb inputs) and modernized the decompiler's host--worker IPC into a versioned, schema-validated protocol.
+\item Stood up a multi-OS GitHub Actions pipeline producing Sigstore/cosign keyless-signed release artifacts with a CycloneDX SBOM, on a dual-remote (GitHub + Codeberg) release workflow.
+\end{rSubsection}
+
 \begin{rSubsection}{\href{https://github.com/CryptoJones/KaliMCP}{KaliMCP} \& \href{https://github.com/CryptoJones/PerplexityAgent}{PerplexityAgent}}{Python}{}{}
 \item Two security-hardened Model Context Protocol (MCP) servers exposing, respectively, a curated subset of Kali Linux security tools and the Perplexity Search/Sonar APIs to AI agents; per-invocation refuse-list guards and audit logging, hardened to NSA MCP security guidance.
 \end{rSubsection}
 
 \begin{rSubsection}{\href{https://github.com/CryptoJones/omind}{omind}}{Python}{}{}
-\item Persistent-memory tooling for Claude Code (Obsidian/OMI): one-command reproducible setup across machines, plus a local web app to view, edit, and add agent memory entries.
+\item Harness-agnostic memory \& governance layer for AI coding agents: policy hooks that gate tool use on a memory consult and enforce compliance across Claude Code, Codex, and other agents (with a violation/verifier audit trail), plus one-command reproducible setup and a local web app to view and edit agent memory.
 \end{rSubsection}
 
 \begin{rSubsection}{\href{https://github.com/CryptoJones/TimeTrackerAPI}{TimeTrackerAPI}}{Node.js, PostgreSQL}{}{}
