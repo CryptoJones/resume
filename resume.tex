@@ -50,7 +50,7 @@
 %----------------------------------------------------------------------------------------
 
 \begin{rSection}{Summary}
-Principal Software Engineer with 25+ years spanning .NET/backend development, AI agent infrastructure and governance, cloud, and security. Recently building production AI agents and Model Context Protocol (MCP) servers, architecting ML pipelines for an AI startup, and maintaining a security-hardened fork of the NSA's Ghidra reverse-engineering platform. Deep C\#/.NET and Python background, with a track record of clear technical writing and developer enablement. USMC veteran.
+Principal Software Engineer with 25+ years spanning .NET/backend development, AI agent infrastructure and governance, cloud, and security. Recently building production AI agents and Model Context Protocol (MCP) servers, architecting ML pipelines for an AI startup, and maintaining a security-hardened fork of the NSA's Ghidra reverse-engineering platform---and architecting Scylla, a ground-up hexagonal reverse-engineering platform built on it. Deep C\#/.NET and Python background, with a track record of clear technical writing and developer enablement. USMC veteran.
 \end{rSection}
 
 
@@ -64,6 +64,12 @@ Principal Software Engineer with 25+ years spanning .NET/backend development, AI
 \item Sole architect of a security-hardened fork of the NSA's Ghidra reverse-engineering platform (a multi-million-line C++/Java codebase), driving a 42-item principal-architect audit into shipped releases across security, decompiler, and CI/release engineering.
 \item Hardened the Java deserialization attack surface (default-reject class filtering; bounds-checked packed-file decode that rejects forged / zip-bomb inputs) and modernized the decompiler's host--worker IPC into a versioned, schema-validated protocol.
 \item Stood up a multi-OS GitHub Actions pipeline producing Sigstore/cosign keyless-signed release artifacts with a CycloneDX SBOM, on a dual-remote (GitHub + Codeberg) release workflow.
+\end{rSubsection}
+
+\begin{rSubsection}{\href{https://github.com/CryptoJones/Scylla}{Scylla} --- hexagonal reverse-engineering platform on the GayHydra engine}{Rust, Cap'n Proto, MCP}{}{}
+\item Architecting a ground-up, ports-and-adapters reverse-engineering platform that wraps GayHydra's proven engine as a durable Rust core behind disposable protocol adapters (an MCP server for AI agents first), with the RE domain model serialized as a stable, zero-copy Cap'n Proto artifact --- the ``narrow waist'' that decouples every producer (analysis engine) from every consumer (UIs, agents, collaborators).
+\item Locked 33 architecture decisions with written rationale: bet on the slowest-moving layer (the RE domain model) and relocated volatility to sheddable edges, so the analysis engine, the wire protocol, and the era's universal adapter can each be replaced without touching the core.
+\item De-risked the keystone bet before writing the core --- an empirical prototype over a multi-architecture, multi-optimization binary corpus proved analyst annotations re-anchor across re-analysis with zero silent mis-attachment (low-confidence matches degrade to flagged-for-review, never a wrong write).
 \end{rSubsection}
 
 \begin{rSubsection}{\href{https://github.com/CryptoJones/KaliMCP}{KaliMCP} \& \href{https://github.com/CryptoJones/PerplexityAgent}{PerplexityAgent}}{Python}{}{}
