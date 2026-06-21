@@ -21,17 +21,18 @@ without a flinch. The frame: **you didn't hide the AI — you out-engineered it.
 > architecture, define what 'correct' means, decide what gets built and in what
 > order, review every change, and catch the drift before it ships. They type
 > faster than I do; they don't decide what's *right*, and left unsupervised they
-> produce confident garbage. So I also built the layer that keeps them honest — a
-> policy-hook compliance system with a memory-consult gate and an audit trail,
-> enforced across multiple agent harnesses. That's the actual 2026 skill: not
+> produce confident garbage. So I also built the layer that keeps them honest —
+> that's **omind**, an open-source policy-hook compliance system with a
+> memory-consult gate and a violation/verifier audit trail, enforced across Claude
+> Code, Codex, and other agent harnesses. That's the actual 2026 skill: not
 > typing the loop, but architecting it, judging it, and instrumenting it so it
 > ships correct work on a multi-million-line codebase most engineers wouldn't
 > touch."
 
 ### Short answer (recruiter screen — 15s)
 > "I direct and govern AI coding agents to ship production work, and I built the
-> compliance tooling that keeps them honest. GayHydra — a security-hardened fork
-> of NSA Ghidra — is the proof I can do it at scale."
+> open-source tooling that governs them — omind. GayHydra, a security-hardened fork
+> of NSA Ghidra, is the proof I can do it at scale."
 
 ### Delivery rules
 - Say it like it's **obvious**, not like a confession. Never apologize for using AI.
@@ -48,9 +49,9 @@ without a flinch. The frame: **you didn't hide the AI — you out-engineered it.
   Ghidra), forked solo, with a 42-item principal-architect audit of real defects
   (security, decompiler, CI) and no team to execute it.
 - **Action:** Stood up an AI-agent pipeline to execute the audit — *and* built the
-  governance layer (policy hooks, memory-consult gate, compliance/verifier audit
-  trail) so the agents couldn't drift, skip review, or ship unverified. Set the
-  standards; reviewed and judged every change.
+  governance layer, **omind** (policy hooks, memory-consult gate, compliance/verifier
+  audit trail), so the agents couldn't drift, skip review, or ship unverified. Set
+  the standards; reviewed and judged every change.
 - **Result:** Shipped releases across the audit — Java-deserialization hardening,
   a versioned schema-validated decompiler IPC, and a multi-OS cosign-signed +
   SBOM release pipeline on a dual-remote workflow. Demonstrated I can drive
@@ -91,8 +92,8 @@ without a flinch. The frame: **you didn't hide the AI — you out-engineered it.
 > "Most recently I've been sole architect of a security-hardened fork of NSA
 > Ghidra, driving a 42-item engineering audit — deserialization hardening, a
 > schema-validated decompiler IPC, and a cosign-signed multi-OS release pipeline —
-> delivered by orchestrating and governing AI coding agents against standards I
-> set and reviewed."
+> delivered by orchestrating AI coding agents against standards I set and reviewed,
+> governed by omind, my open-source agent-compliance layer."
 
 ---
 
