@@ -66,10 +66,12 @@ Principal Software Engineer with 25+ years spanning .NET/backend development, AI
 \item Stood up a multi-OS GitHub Actions pipeline producing Sigstore/cosign keyless-signed release artifacts with a CycloneDX SBOM, on a dual-remote (GitHub + Codeberg) release workflow.
 \end{rSubsection}
 
-\begin{rSubsection}{\href{https://github.com/CryptoJones/Scylla}{Scylla} --- hexagonal reverse-engineering platform on the GayHydra engine}{Rust, Cap'n Proto, MCP}{}{}
-\item Architecting a ground-up, ports-and-adapters reverse-engineering platform that wraps GayHydra's proven engine as a durable Rust core behind disposable protocol adapters (an MCP server for AI agents first), with the RE domain model serialized as a stable, zero-copy Cap'n Proto artifact --- the ``narrow waist'' that decouples every producer (analysis engine) from every consumer (UIs, agents, collaborators).
-\item Locked 33 architecture decisions with written rationale: bet on the slowest-moving layer (the RE domain model) and relocated volatility to sheddable edges, so the analysis engine, the wire protocol, and the era's universal adapter can each be replaced without touching the core.
-\item De-risked the keystone bet before writing the core --- an empirical prototype over a multi-architecture, multi-optimization binary corpus proved analyst annotations re-anchor across re-analysis with zero silent mis-attachment (low-confidence matches degrade to flagged-for-review, never a wrong write).
+\begin{rSubsection}{\href{https://github.com/CryptoJones/Scylla}{Scylla} --- hexagonal reverse-engineering platform on the GayHydra engine}{Rust, Cap'n Proto, gRPC, MCP}{}{}
+\item Architected and built a ground-up, ports-and-adapters reverse-engineering platform that wraps GayHydra's engine as a durable Rust core behind disposable protocol adapters (an MCP server for AI agents first), with the RE domain model serialized as a stable, zero-copy Cap'n Proto artifact --- the ``narrow waist'' that decouples every producer (analysis engine) from every consumer (UIs, agents, collaborators).
+\item Locked 40+ architecture decisions with written rationale: bet on the slowest-moving layer (the RE domain model) and relocated volatility to sheddable edges, so the analysis engine, the wire protocol, and the agent adapter can each be replaced without touching the core.
+\item Designed a four-pass identity-anchored matcher (exact signature, architecture-independent string/import/call anchors, reciprocal-best fuzzy, and call-graph propagation) that carries analyst annotations across re-analysis, recompilation, and \emph{cross-architecture} rebuilds (x86-64, aarch64, and 32-bit) under a hard ``zero silent mis-attachment'' invariant --- enforced by a ratcheted release gate over an 11-class binary corpus, so low-confidence matches degrade to flagged-for-review, never a wrong write.
+\item Built the engine as a sandboxed gRPC service with a warm co-resident GayHydra runtime (roughly 3x faster than cold per-call analysis) plus a worker pool for concurrency and a cold-subprocess fallback behind the same RPC; de-risked the major bets with empirical spikes before committing the build (proving Ghidra Version Tracking the wrong tool for cross-architecture and a Go-aware producer the right one, by measurement).
+\item Contained the adversarial-binary blast radius: the parser runs in a no-egress container (no network namespace; gRPC over a bind-mounted Unix socket) behind a documented seam-by-seam threat model, a bounds-checked total artifact loader, and keyless Sigstore signing of the CLI and engine image.
 \end{rSubsection}
 
 \begin{rSubsection}{\href{https://github.com/CryptoJones/KaliMCP}{KaliMCP} \& \href{https://github.com/CryptoJones/PerplexityAgent}{PerplexityAgent}}{Python}{}{}
@@ -77,11 +79,8 @@ Principal Software Engineer with 25+ years spanning .NET/backend development, AI
 \end{rSubsection}
 
 \begin{rSubsection}{\href{https://github.com/CryptoJones/omind}{omind}}{Python}{}{}
-\item Harness-agnostic memory \& governance layer for AI coding agents: policy hooks that gate tool use on a memory consult and enforce compliance across Claude Code, Codex, and other agents (with a violation/verifier audit trail), plus one-command reproducible setup and a local web app to view and edit agent memory.
-\end{rSubsection}
-
-\begin{rSubsection}{\href{https://github.com/CryptoJones/TimeTrackerAPI}{TimeTrackerAPI}}{Node.js, PostgreSQL}{}{}
-\item Open-source REST API rewrite with API-key authentication over a PostgreSQL backend.
+\item Harness-agnostic memory \& governance layer that gives every AI coding agent on a machine one shared, file-based long-term memory and a single policy-enforcement point --- wired across Claude Code, Codex, and other harnesses so a rule learned under one enforces under all, with one-command reproducible setup and a local web app to browse and edit agent memory.
+\item Designed the ``checks and balances'' that keep agents honest: a per-turn gate that blocks tool use until the agent consults its memory, a relevance verifier that rejects off-topic consults (so the gate can't be cleared by reading an irrelevant note), deliberate opt-in for high-risk actions (e.g.\ publishing to a public remote), and a compliance audit trail of violations, repeat offenders, and verifier verdicts --- all fail-open, so a broken hook never wedges the agent, with self-healing drift detection and a doctor that diagnoses and repairs the wiring.
 \end{rSubsection}
 
 \begin{rSubsection}{Open-Source Contributions}{C\#/.NET, Python, Java}{}{}
