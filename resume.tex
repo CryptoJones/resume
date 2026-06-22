@@ -60,16 +60,14 @@ Principal Software Engineer with 25+ years across .NET/backend, AI agent infrast
 \begin{rSection}{Selected Open-Source \& AI Projects}
 
 \begin{rSubsection}{\href{https://github.com/CryptoJones/GayHydra}{GayHydra} --- hardened fork of NSA Ghidra}{C++, Java}{}{}
-\item Sole architect of a security-hardened fork of the NSA's Ghidra reverse-engineering platform (a multi-million-line C++/Java codebase), driving a 42-item principal-architect audit into shipped releases across security, decompiler, and CI/release engineering.
-\item Hardened the Java deserialization attack surface (default-reject class filtering; bounds-checked packed-file decode that rejects forged / zip-bomb inputs) and modernized the decompiler's host--worker IPC into a versioned, schema-validated protocol.
-\item Stood up a multi-OS GitHub Actions pipeline producing Sigstore/cosign keyless-signed release artifacts with a CycloneDX SBOM, on a dual-remote (GitHub + Codeberg) release workflow.
+\item Sole architect of a security-hardened fork of NSA Ghidra (a multi-million-line C++/Java codebase) --- drove a 42-item principal-architect audit into shipped releases across security, the decompiler, and CI.
+\item Hardened the Java-deserialization attack surface, modernized the decompiler's host--worker IPC into a versioned, schema-validated protocol, and shipped a multi-OS, Sigstore keyless-signed release pipeline with a CycloneDX SBOM.
 \end{rSubsection}
 
 \begin{rSubsection}{\href{https://github.com/CryptoJones/Scylla}{Scylla} --- hexagonal reverse-engineering platform on the GayHydra engine}{Rust, Cap'n Proto, gRPC, MCP}{}{}
-\item Architected and built a ground-up, ports-and-adapters reverse-engineering platform that wraps GayHydra's engine as a durable Rust core behind disposable protocol adapters (an MCP server for AI agents first), with the RE domain model serialized as a stable, zero-copy Cap'n Proto artifact --- the ``narrow waist'' that decouples every producer (analysis engine) from every consumer (UIs, agents, collaborators).
-\item Locked 40+ architecture decisions with written rationale: bet on the slowest-moving layer (the RE domain model) and relocated volatility to sheddable edges, so the analysis engine, the wire protocol, and the agent adapter can each be replaced without touching the core.
-\item Designed a four-pass identity-anchored matcher (exact signature, architecture-independent string/import/call anchors, reciprocal-best fuzzy, and call-graph propagation) that carries analyst annotations across re-analysis, recompilation, and \emph{cross-architecture} rebuilds (x86-64, aarch64, and 32-bit) under a hard ``zero silent mis-attachment'' invariant --- enforced by a ratcheted release gate over an 11-class binary corpus, so low-confidence matches degrade to flagged-for-review, never a wrong write.
-\item Built the engine as a sandboxed gRPC service --- a warm co-resident GayHydra runtime (roughly 3x faster than cold per-call analysis) with a worker pool and cold-subprocess fallback, running in a no-egress container (no network namespace; gRPC over a bind-mounted Unix socket) behind a seam-by-seam threat model, a bounds-checked artifact loader, and keyless Sigstore signing of the CLI and image --- with the major bets de-risked by empirical spikes before building.
+\item Architected and built a hexagonal reverse-engineering platform: GayHydra wrapped as a durable Rust core behind swappable adapters (an MCP server for AI agents first), with the model as a zero-copy Cap'n Proto artifact --- the ``narrow waist'' that decouples the engine from every consumer.
+\item Designed a four-pass re-anchoring matcher that carries analyst annotations across recompiles and \emph{cross-architecture} rebuilds (x86-64, aarch64, 32-bit) under a hard zero-wrong invariant, enforced by a ratcheted release gate over an 11-class binary corpus.
+\item Ran the engine as a sandboxed gRPC service --- warm in-process runtime (about 3x faster), worker pool, no-egress container, keyless-signed artifacts --- across 40+ logged architecture decisions, with the major bets de-risked by spikes first.
 \end{rSubsection}
 
 \begin{rSubsection}{\href{https://github.com/CryptoJones/KaliMCP}{KaliMCP} \& \href{https://github.com/CryptoJones/PerplexityAgent}{PerplexityAgent}}{Python}{}{}
