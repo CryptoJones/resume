@@ -22,12 +22,11 @@
 
 \documentclass{resume} % Use the custom resume.cls style
 
-\usepackage[left=0.75in,top=0.6in,right=0.75in,bottom=0.6in]{geometry} % Document margins
+\usepackage[left=0.5in,top=0.5in,right=0.5in,bottom=0.5in]{geometry} % Document margins
 \PassOptionsToPackage{hyphens}{url}
 \usepackage{hyperref}
-\hypersetup{pageanchor=false}
+\hypersetup{pageanchor=false, colorlinks=true, urlcolor=accent, linkcolor=accent}
 \usepackage{needspace}
-\usepackage{xcolor}
 
 \name{Aaron K. Clark} % Your name
 
@@ -50,7 +49,7 @@
 %----------------------------------------------------------------------------------------
 
 \begin{rSection}{Summary}
-Principal Software Engineer with 25+ years spanning .NET/backend development, AI agent infrastructure and governance, cloud, and security. Recently building production AI agents and Model Context Protocol (MCP) servers, architecting ML pipelines for an AI startup, and maintaining a security-hardened fork of the NSA's Ghidra reverse-engineering platform---and architecting Scylla, a ground-up hexagonal reverse-engineering platform built on it. Deep C\#/.NET and Python background, with a track record of clear technical writing and developer enablement. USMC veteran.
+Principal Software Engineer with 25+ years across .NET/backend, AI agent infrastructure \& governance, cloud, and security. Recently building production AI agents and Model Context Protocol (MCP) servers, architecting ML pipelines for an AI startup, maintaining GayHydra (a security-hardened fork of NSA Ghidra), and architecting Scylla, a ground-up hexagonal reverse-engineering platform built on it. Deep C\#/.NET and Python background and a clear technical writer. USMC veteran.
 \end{rSection}
 
 
@@ -70,8 +69,7 @@ Principal Software Engineer with 25+ years spanning .NET/backend development, AI
 \item Architected and built a ground-up, ports-and-adapters reverse-engineering platform that wraps GayHydra's engine as a durable Rust core behind disposable protocol adapters (an MCP server for AI agents first), with the RE domain model serialized as a stable, zero-copy Cap'n Proto artifact --- the ``narrow waist'' that decouples every producer (analysis engine) from every consumer (UIs, agents, collaborators).
 \item Locked 40+ architecture decisions with written rationale: bet on the slowest-moving layer (the RE domain model) and relocated volatility to sheddable edges, so the analysis engine, the wire protocol, and the agent adapter can each be replaced without touching the core.
 \item Designed a four-pass identity-anchored matcher (exact signature, architecture-independent string/import/call anchors, reciprocal-best fuzzy, and call-graph propagation) that carries analyst annotations across re-analysis, recompilation, and \emph{cross-architecture} rebuilds (x86-64, aarch64, and 32-bit) under a hard ``zero silent mis-attachment'' invariant --- enforced by a ratcheted release gate over an 11-class binary corpus, so low-confidence matches degrade to flagged-for-review, never a wrong write.
-\item Built the engine as a sandboxed gRPC service with a warm co-resident GayHydra runtime (roughly 3x faster than cold per-call analysis) plus a worker pool for concurrency and a cold-subprocess fallback behind the same RPC; de-risked the major bets with empirical spikes before committing the build (proving Ghidra Version Tracking the wrong tool for cross-architecture and a Go-aware producer the right one, by measurement).
-\item Contained the adversarial-binary blast radius: the parser runs in a no-egress container (no network namespace; gRPC over a bind-mounted Unix socket) behind a documented seam-by-seam threat model, a bounds-checked total artifact loader, and keyless Sigstore signing of the CLI and engine image.
+\item Built the engine as a sandboxed gRPC service --- a warm co-resident GayHydra runtime (roughly 3x faster than cold per-call analysis) with a worker pool and cold-subprocess fallback, running in a no-egress container (no network namespace; gRPC over a bind-mounted Unix socket) behind a seam-by-seam threat model, a bounds-checked artifact loader, and keyless Sigstore signing of the CLI and image --- with the major bets de-risked by empirical spikes before building.
 \end{rSubsection}
 
 \begin{rSubsection}{\href{https://github.com/CryptoJones/KaliMCP}{KaliMCP} \& \href{https://github.com/CryptoJones/PerplexityAgent}{PerplexityAgent}}{Python}{}{}
@@ -116,35 +114,19 @@ Principal Software Engineer with 25+ years spanning .NET/backend development, AI
 	\item SME for SaaS and on-prem LogScale(Humio), Kafka, and log shippers. Created sandbox infrastructure using terraform and k8s. Wrote automation and tooling in bash and Python.
 \end{rSubsection}
 
-\begin{rSubsection}{CloudHesive}{Dec 2021 - May 2022}{Cloud Operations Supervisor}{Remote}
-\item Led the Cloud Operations team supporting 2000+ customer systems across AWS, Azure, and VMware; hired and developed engineers focused on security and operational excellence.
+\begin{rSubsection}{CloudHesive}{Aug 2021 - May 2022}{Cloud Operations Supervisor / Cloud Support Engineer II}{Remote}
+\item Promoted to lead the Cloud Operations team supporting 2000+ customer systems across AWS, Azure, and VMware --- hired and developed engineers, and ran monitoring (Datadog, SumoLogic, NewRelic) and backup/recovery across CloudFormation, CloudWatch, EC2, EFS, ELB, IAM, RDS, S3, and VPC.
 \end{rSubsection}
 
-\begin{rSubsection}{CloudHesive}{Aug 2021 - Dec 2021}{Cloud Support Engineer II}{Remote}
-\item Supported more than 2000 customer systems on AWS, Azure, and VMWare Infrastructures. Used Datadog, SumoLogic, and NewRelic to monitor customer systems and networks. Managed backup and recovery processes. Technologies included CloudFormation, CloudWatch, EC2, EFS, ELB, IAM, RDS, S3, VPC, and Workspaces.  
+\begin{rSubsection}{Reinke Manufacturing Company}{Dec 2015 - Feb 2021}{Senior Developer}{Remote}
+\item Led development of middleware connecting an AS/400 ERP to a WinForms sales application; built the ASP.NET MVC authentication/authorization system; stood up and maintained Azure infrastructure; evaluated and recommended third-party SAST tooling.
 \end{rSubsection}
 
-\begin{rSubsection}{Tmutla}{Feb 2021 - Aug 2021}{Cybersecurity Consultant}{Grand Island, Nebraska}
-\item Performed Web Application Penetration tests and wrote customer reports.
-\end{rSubsection}
-
-\begin{rSubsection}{Reinke Manufacturing Company}{Dec 2015 - Feb 2021}{Senior Developer}{Remote} 
-\item Led application development of middleware connecting an AS/400-based ERP system and a WinForms sales application. Built the authentication/authorization system using ASP.NET MVC 4. Stood up and maintained Azure infrastructure. Evaluated 3rd-party SAST tools and made recommendations for their implementation.
-\end{rSubsection}
-
-\begin{rSubsection}{Alpine Testing Solutions, Inc.}{2014 - 2015}{Software Developer}{Remote}
-\item Monitored and mitigated data import errors; created T-SQL queries for data imports and exports; wrote XML for manual data imports.
-\end{rSubsection}
-
-\begin{rSubsection}{Orthman Manufacturing, Inc.}{2012 - 2014}{IT Specialist II}{Lexington, Nebraska}
-\item Led virtualization project to migrate physical Windows Machines to virtual hosts. Created .NET Applications for internal use.
-\end{rSubsection}
-
-\begin{rSubsection}{Intellicom Computer Consulting, Inc.}{2009 - 2012}{Senior Engineering Technician}{Kearney, Nebraska}
-\item Installed and maintained Active Directory, File, and Exchange servers. 
-\end{rSubsection}
-
-\begin{rSubsection}{Earlier Experience}{1998 - 2008}{}{}
+\begin{rSubsection}{Earlier Experience}{1998 - 2021}{}{}
+\item {\bf Tmutla} -- Cybersecurity Consultant (2021), Grand Island, NE. Web-application penetration testing and client reporting.
+\item {\bf Alpine Testing Solutions} -- Software Developer (2014--2015), Remote. T-SQL data import/export and XML data-load tooling.
+\item {\bf Orthman Manufacturing} -- IT Specialist II (2012--2014), Lexington, NE. Led a physical-to-virtual Windows migration and built internal .NET applications.
+\item {\bf Intellicom Computer Consulting} -- Senior Engineering Technician (2009--2012), Kearney, NE. Installed and maintained Active Directory, File, and Exchange servers.
 \item {\bf United States Marine Corps} -- Information Specialist (2003--2008), Washington, DC. Operated and supported the USMC network; graduate of the USMC Information Assurance Manager Course.
 \item {\bf Rackspace} -- Linux Systems Administrator (2003), San Antonio, TX.
 \item {\bf Cimarron Software Services} -- Systems Analyst at NASA Johnson Space Center (2001--2002), Houston, TX.
@@ -157,7 +139,7 @@ Principal Software Engineer with 25+ years spanning .NET/backend development, AI
 %	TECHNICAL STRENGTHS SECTION
 %----------------------------------------------------------------------------------------
 
-\needspace{14\baselineskip}
+\needspace{5\baselineskip}
 \begin{rSection}{Technical Strengths}
 
 \begin{tabular}{ @{} >{\bfseries}l @{\hspace{6ex}} p{4.5in} }
@@ -187,14 +169,8 @@ MS, Data Analytics (In Progress)
 {\bf Rochester Institute of Technology} \\
 \href{https://raw.githubusercontent.com/CryptoJones/cv/master/RIT_MMM.pdf}{MicroMaster's in Cybersecurity}
 
-{\bf Kennesaw State University} \\
-\href{https://raw.githubusercontent.com/CryptoJones/cv/master/KSU_GRADCERT_CSF.jpg}{Graduate Certificate, Computer Science}
-
-{\bf Colorado State University} \\
-\href{https://raw.githubusercontent.com/CryptoJones/cv/master/CSU_GRADCERT_ITPM.jpg}{Graduate Certificate, IT Project Management}
-
-{\bf University of Maryland University College} \\
-Undergraduate Certificate, Unix System Administration
+{\bf Graduate \& Professional Certificates} \\
+\href{https://raw.githubusercontent.com/CryptoJones/cv/master/KSU_GRADCERT_CSF.jpg}{Computer Science} (Kennesaw State); \href{https://raw.githubusercontent.com/CryptoJones/cv/master/CSU_GRADCERT_ITPM.jpg}{IT Project Management} (Colorado State); Unix System Administration (UMUC)
 
 \end{rSection}
 
@@ -208,7 +184,6 @@ Undergraduate Certificate, Unix System Administration
 \begin{rSubsection}{Community \& Industry Service}{2021 - Present}{}{}
 \item {\bf Minden Volunteer Fire Department} --- Probationary Firefighter / EMT-B (Dec 2024 -- Present), Minden, NE.
 \item {\bf Women in CyberSecurity (WiCyS)} --- Student Mentor (2021--2024).
-\item {\bf Harvard University} --- Teaching Assistant, Online Computing Mini Course (Spring 2022).
 \item {\bf Army National Guard} --- Red Team (OPFOR) Lead, Cybershield 2021.
 \end{rSubsection}
 

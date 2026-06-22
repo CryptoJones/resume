@@ -25,6 +25,8 @@
 \usepackage[parfill]{parskip} % Remove paragraph indentation
 \usepackage{array} % Required for boldface (\bf and \bfseries) tabular columns
 \usepackage{ifthen} % Required for ifthenelse statements
+\usepackage{xcolor} % Accent color for the name, section headings, and rules
+\definecolor{accent}{HTML}{1F4E79} % professional deep-blue accent
 
 \pagestyle{empty} % Suppress page numbers
 
@@ -67,7 +69,7 @@
 % \printname is used to print the name as a page header
 \def \printname {
   \begingroup
-    \hfil{\MakeUppercase{\namesize\bf \@name}}\hfil
+    \hfil{\color{accent}\MakeUppercase{\namesize\bf \@name}}\hfil
     \nameskip\break
   \endgroup
 }
@@ -95,9 +97,9 @@
 % Defines the rSection environment for the large sections within the CV
 \newenvironment{rSection}[1]{ % 1 input argument - section name
   \sectionskip
-  \MakeUppercase{\bf #1} % Section title
+  {\color{accent}\MakeUppercase{\bf #1}} % Section title
   \sectionlineskip
-  \hrule % Horizontal line
+  {\color{accent}\hrule height 1.2pt} % Horizontal line (accent)
   \begin{list}{}{ % List for each individual item in the section
     \setlength{\leftmargin}{1.5em} % Margin within the section
   }
@@ -120,12 +122,12 @@
    \itemsep -0.5em \vspace{-0.5em} % Compress items in list together for aesthetics
   }{
   \end{list}
-  \vspace{0.5em} % Some space after the list of bullet points
+  \vspace{0.15em} % Some space after the list of bullet points
 }
 
 % The below commands define the whitespace after certain things in the document - they can be \smallskip, \medskip or \bigskip
 \def\namesize{\huge} % Size of the name at the top of the document
 \def\addressskip{\smallskip} % The space between the two address (or phone/email) lines
-\def\sectionlineskip{\medskip} % The space above the horizontal line for each section 
-\def\nameskip{\bigskip} % The space after your name at the top
-\def\sectionskip{\medskip} % The space after the heading section
+\def\sectionlineskip{\smallskip} % The space above the horizontal line for each section
+\def\nameskip{\medskip} % The space after your name at the top
+\def\sectionskip{\smallskip} % The space after the heading section
