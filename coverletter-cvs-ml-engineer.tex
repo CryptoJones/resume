@@ -1,0 +1,58 @@
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% Cover letter --- CVS Health (Caremark), Machine Learning Engineer, Irving TX (R0942466).
+% Shares resume.cls for a cohesive letterhead + accent color.
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\documentclass{resume}
+
+\usepackage[left=0.9in,top=0.7in,right=0.9in,bottom=0.7in]{geometry}
+\PassOptionsToPackage{hyphens}{url}
+\usepackage{hyperref}
+\hypersetup{pageanchor=false, colorlinks=true, urlcolor=accent, linkcolor=accent}
+
+\name{Aaron K. Clark}
+\makeatletter
+\def\printname{%
+  \begin{center}%
+    {\color{accent}\MakeUppercase{\namesize\bf \@name}}%
+  \end{center}%
+  \nameskip
+}
+\makeatother
+\address{\href{tel:15712975406}{(571)~$\cdot$~297~$\cdot$~5406} \\ \href{mailto:aaron.clark@milcyber.org}{aaron.clark@milcyber.org}}
+\address{PO BOX 28 MINDEN, NE 68959 \\ \href{https://linkedin.com/in/aaronkclark}{linkedin.com/in/aaronkclark} \\ \href{https://github.com/CryptoJones}{github.com/CryptoJones}}
+
+\def\company{CVS Health}
+\def\role{Machine Learning Engineer}
+\def\manager{Hiring Team}
+
+\begin{document}
+
+\vspace{0.5em}
+\today
+
+\bigskip
+\noindent \manager \\
+\company\ --- Caremark, Irving, TX (R0942466)
+
+\bigskip
+\noindent Dear \manager,
+
+CVS Health's mission --- to simplify health care one person, one family, and one community at a time --- is one I live outside of work: I'm a volunteer firefighter and EMT-B with my local department in rural Nebraska. I'm applying for the \role\ role on the Caremark team because I want to point the production machine-learning systems I build at work that actually reaches people's health.
+
+For the past year I've architected and operationalized ML pipelines for an AI startup as a Principal Software Architect \& ML Engineer --- guiding model selection and deployment strategy and integrating ML into production systems. That is the charter of this role: designing, deploying, and retraining enterprise ML products and pipelines that data scientists and the business depend on. Over 25 years I've learned the hard part of ML in production is rarely the model --- it's the platform around it. My open-source project \href{https://github.com/CryptoJones/Scylla}{Scylla} is built on exactly that idea: a durable core behind stable, versioned interfaces so the engine, the data, and the consumers can each evolve without breaking the others. I bring the same discipline to ML pipelines --- reproducible training and retraining, deployment you can trust, and monitoring for the data-distribution drift that quietly degrades a model once it meets the real world.
+
+My day-to-day is the modern ML stack in Python: RAG pipelines, vector databases, multi-provider model routing, feature engineering, and comparing candidate models on the statistical metrics that map to real business KPIs. What I'd add beyond that is a security background most ML engineers don't carry --- I maintain a hardened fork of the NSA's Ghidra platform, I've landed merged security fixes to an open-source AI-agent framework, and I build every AI service to NSA security guidance with per-call guards and audit logging. The posting's call to ``investigate adversarial trends and identify behavior patterns'' is familiar ground, and in a pharmacy-benefits setting handling sensitive member data, ML that is secure and accountable by design matters as much as ML that is accurate.
+
+I've led and developed engineering teams, mentored through Women in CyberSecurity, and spent my career translating business requirements into systems stakeholders can rely on. I'm completing a Master's in Data Analytics to formalize the quantitative foundation under the work I already do. The role's telecommuting option suits my proven remote track record, and I'd gladly travel to Irving as the team needs.
+
+I'd welcome a short call to discuss how I can help CVS Health build machine learning that scales --- safely.
+
+\bigskip
+\noindent Thank you for your time and consideration.
+
+\bigskip
+\noindent Sincerely, \\[1em]
+Aaron K. Clark
+
+\end{document}
