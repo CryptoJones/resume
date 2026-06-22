@@ -26,7 +26,7 @@
 \usepackage{array} % Required for boldface (\bf and \bfseries) tabular columns
 \usepackage{ifthen} % Required for ifthenelse statements
 \usepackage{xcolor} % Accent color for the name, section headings, and rules
-\definecolor{accent}{HTML}{1F4E79} % professional deep-blue accent
+\definecolor{accent}{HTML}{0C2340} % deep navy accent (high contrast, readable)
 
 \pagestyle{empty} % Suppress page numbers
 

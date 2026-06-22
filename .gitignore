@@ -7,8 +7,3 @@
 *.fdb_latexmk
 .vs/
 __pycache__/
-
-# Cover letters are per-application + tailored — kept local, never published to the forges.
-coverletter*.tex
-coverletter*.pdf
-coverletter*.md
