@@ -1,0 +1,111 @@
+/* Cyberdeck theme for the code-showcase PDF.
+   Dark-neon terminal aesthetic: near-black bg, monospace, cyan glow headings,
+   terminal-green accents. Includes on-theme anti-OCR layers (CRT scanlines,
+   turbulence grain, glyph-warp filter, diagonal watermark). */
+
+:root {
+  --bg:        #07090f;
+  --bg-panel:  #0b0f18;
+  --bg-code:   #0a0e16;
+  --fg:        #c6d2e2;
+  --dim:       #5a6678;
+  --cyan:      #27d4ff;
+  --green:     #55ff99;
+  --red:       #ff4f4f;
+  --amber:     #ffb454;
+  --violet:    #b48cff;
+  --border:    #16202e;
+}
+
+@page { size: letter; margin: 0; }
+
+* { box-sizing: border-box; }
+
+html, body {
+  margin: 0; padding: 0;
+  background: var(--bg);
+  color: var(--fg);
+  font-family: Menlo, "DejaVu Sans Mono", Consolas, monospace;
+  -webkit-print-color-adjust: exact;
+  print-color-adjust: exact;
+}
+
+.page {
+  position: relative;
+  width: 8.5in; height: 11in;
+  padding: 0.7in 0.5in;
+  overflow: hidden;
+  page-break-after: always;
+  background: var(--bg);
+}
+.page:last-child { page-break-after: auto; }
+
+/* diagonal repeating watermark (no name / no URL) — the sole anti-copy overlay
+   in the crisp profile; pages are still flattened to images (no text layer). */
+.watermark {
+  position: absolute; inset: -20%; pointer-events: none; z-index: 6;
+  opacity: 0.07;
+  transform: rotate(-32deg);
+  background-image: url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' width='520' height='200'><text x='0' y='110' font-family='monospace' font-size='30' fill='%2327d4ff'>SAMPLE &#8212; DO NOT REPRODUCE</text></svg>");
+  background-repeat: repeat;
+}
+
+/* ---- Title page ---- */
+.title-page { display: flex; flex-direction: column; justify-content: center; }
+.title-page .deck {
+  font-size: 13px; letter-spacing: 0.5em; color: var(--green);
+  text-transform: uppercase; margin-bottom: 28px;
+}
+.title-page h1 {
+  font-size: 52px; line-height: 1.1; margin: 0 0 10px 0;
+  color: var(--cyan);
+  text-shadow: 0 0 14px rgba(39,212,255,0.55), 0 0 28px rgba(39,212,255,0.25);
+}
+.title-page .sub { font-size: 22px; color: var(--fg); margin: 6px 0 34px; }
+.title-page .meta { font-size: 15px; color: var(--dim); line-height: 1.8; }
+.title-page .rule { height: 2px; width: 160px; background: var(--red); margin: 22px 0; }
+
+/* ---- Project intro page ---- */
+.intro .kicker {
+  font-size: 13px; letter-spacing: 0.32em; text-transform: uppercase;
+  color: var(--green); margin-bottom: 14px;
+}
+.intro h2 {
+  font-size: 40px; margin: 0 0 6px 0; color: var(--cyan);
+  text-shadow: 0 0 12px rgba(39,212,255,0.5), 0 0 24px rgba(39,212,255,0.2);
+}
+.intro .tagline { font-size: 20px; color: var(--green); margin: 0 0 26px; }
+.intro .blurb {
+  font-size: 20px; line-height: 1.55; color: var(--fg);
+  max-width: 6.6in; margin: 0 0 30px;
+  border-left: 3px solid var(--red); padding-left: 18px;
+}
+.chips { margin-top: 8px; }
+.chip {
+  display: inline-block; font-size: 14px; padding: 5px 13px; margin: 0 9px 9px 0;
+  border: 1px solid var(--border); border-radius: 4px;
+  background: var(--bg-panel); color: var(--fg);
+}
+.chip.lang  { color: var(--cyan);  border-color: rgba(39,212,255,0.4); }
+.chip.role  { color: var(--amber); border-color: rgba(255,180,84,0.35); }
+
+/* ---- Code page ---- */
+.code-page .caption {
+  font-size: 15px; color: var(--dim); margin: 0 0 12px;
+  border-bottom: 1px solid var(--border); padding-bottom: 10px;
+}
+.code-page .caption .fname { color: var(--green); }
+.code-page .caption .lang  { color: var(--cyan); float: right; }
+
+.code-wrap {
+  background: var(--bg-code);
+  border: 1px solid var(--border);
+  border-radius: 6px;
+  padding: 18px 20px;
+}
+pre.code {
+  margin: 0; font-size: 10.5px; line-height: 1.36;
+  font-family: Menlo, "DejaVu Sans Mono", Consolas, monospace;
+  white-space: pre; tab-size: 4;
+}
+pre.code .ln { color: #38465c; user-select: none; }

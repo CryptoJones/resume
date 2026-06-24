@@ -7,3 +7,8 @@
 *.fdb_latexmk
 .vs/
 __pycache__/
+
+# showcase build intermediates (tooling is committed; samples/images/HTML are not)
+showcase/samples/
+showcase/pages/
+showcase/showcase.html
