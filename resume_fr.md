@@ -137,7 +137,7 @@ Ingénieur logiciel principal cumulant plus de 25 ans d’expérience couvrant l
 ## Formation
 
 **Eastern University** 2026 – Présent  
-Master, analyse de données (en cours)
+Master, intelligence artificielle appliquée (en cours)
 
 **University of Maryland University College**  
 [Licence en informatique et sciences de l’information](https://github.com/CryptoJones/cv/raw/master/UMUC_UNDERGRAD_DIPLOMA.jpg)

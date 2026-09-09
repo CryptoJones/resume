@@ -137,7 +137,7 @@ Ingeniero de Software Principal con más de 25 años de experiencia que abarca d
 ## Educación
 
 **Eastern University** 2026 – Presente  
-MS, Análisis de Datos (En Curso)
+MS, Inteligencia Artificial Aplicada (En Curso)
 
 **University of Maryland University College**  
 [Licenciatura en Ciencias, Ciencias de la Computación e Información](https://github.com/CryptoJones/cv/raw/master/UMUC_UNDERGRAD_DIPLOMA.jpg)
