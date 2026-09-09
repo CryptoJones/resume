@@ -139,7 +139,7 @@ Principal Software Engineer with 25+ years spanning .NET/backend development, AI
 ## Education
 
 **Eastern University** 2026 – Present  
-MS, Data Analytics (In Progress)
+MS, Applied Artificial Intelligence (In Progress)
 
 **University of Maryland University College**  
 [Bachelor of Science, Computer and Information Science](https://github.com/CryptoJones/cv/raw/master/UMUC_UNDERGRAD_DIPLOMA.jpg)
