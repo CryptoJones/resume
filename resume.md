@@ -133,7 +133,7 @@ Principal Software Engineer with 25+ years spanning .NET/backend development, AI
 | **Cloud** | AWS (EC2, S3, RDS, IAM, VPC, ELB, EFS, CloudFormation, CloudWatch), Azure, Terraform |
 | **Tools** | Burp Suite, Postman, Wireshark, NMap, LogScale (Humio), Kafka, Docker, Kubernetes |
 | **Languages** | Python, C#, TypeScript, JavaScript, VB.NET, T-SQL, PowerShell, Bash |
-| **Certifications** | SSCP, AWS AI Practitioner, AWS Solutions Architect Associate, AWS Cloud Practitioner, CompTIA A+, CompTIA Network+, MS: Programming in C# |
+| **Certifications** | SSCP, [AWS AI Practitioner](https://www.credly.com/badges/6eda0d26-3542-4f75-b1e5-6d481e701bf1), AWS Solutions Architect Associate, AWS Cloud Practitioner, CompTIA A+, CompTIA Network+, MS: Programming in C# |
 | **Memberships** | OWASP, ACM, DC402, RITSEC, SPARSA.ORG, OperationCode |
 
 ## Education

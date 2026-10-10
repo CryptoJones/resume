@@ -131,7 +131,7 @@ Ingénieur logiciel principal cumulant plus de 25 ans d’expérience couvrant l
 | **Cloud** | AWS (EC2, S3, RDS, IAM, VPC, ELB, EFS, CloudFormation, CloudWatch), Azure, Terraform |
 | **Outils** | Burp Suite, Postman, Wireshark, NMap, LogScale (Humio), Kafka, Docker, Kubernetes |
 | **Langages** | Python, C#, TypeScript, JavaScript, VB.NET, T-SQL, PowerShell, Bash |
-| **Certifications** | SSCP, AWS AI Practitioner, AWS Solutions Architect Associate, AWS Cloud Practitioner, CompTIA A+, CompTIA Network+, MS: Programming in C# |
+| **Certifications** | SSCP, [AWS AI Practitioner](https://www.credly.com/badges/6eda0d26-3542-4f75-b1e5-6d481e701bf1), AWS Solutions Architect Associate, AWS Cloud Practitioner, CompTIA A+, CompTIA Network+, MS: Programming in C# |
 | **Adhésions** | OWASP, ACM, DC402, RITSEC, SPARSA.ORG, OperationCode |
 
 ## Formation
