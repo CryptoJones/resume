@@ -131,7 +131,7 @@ Ingeniero de Software Principal con más de 25 años de experiencia que abarca d
 | **Nube** | AWS (EC2, S3, RDS, IAM, VPC, ELB, EFS, CloudFormation, CloudWatch), Azure, Terraform |
 | **Herramientas** | Burp Suite, Postman, Wireshark, NMap, LogScale (Humio), Kafka, Docker, Kubernetes |
 | **Lenguajes** | Python, C#, TypeScript, JavaScript, VB.NET, T-SQL, PowerShell, Bash |
-| **Certificaciones** | SSCP, AWS Solutions Architect Associate, AWS Cloud Practitioner, CompTIA A+, CompTIA Network+, MS: Programming in C# |
+| **Certificaciones** | SSCP, AWS AI Practitioner, AWS Solutions Architect Associate, AWS Cloud Practitioner, CompTIA A+, CompTIA Network+, MS: Programming in C# |
 | **Membresías** | OWASP, ACM, DC402, RITSEC, SPARSA.ORG, OperationCode |
 
 ## Educación
